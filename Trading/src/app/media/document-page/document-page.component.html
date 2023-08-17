@@ -1,0 +1,284 @@
+<div class="learn_header">
+  <h1 class="bg-black font-mono w-full h-20 text-center text-6xl">
+    Welcome to Trading
+  </h1>
+  <div class="container">
+    <div class="flex text-center font-serif text-4xl">
+      <!-- <a routerLink="" class="bg-slate-400 w-full">Vedios</a> -->
+      <h1
+        class="bg-gradient-to-r from-indigo-600 to-pink-500 hover:text-pink-600 ease-in duration-300 text-6xl"
+      >
+        Documents
+      </h1>
+
+      <!-- <div class="form-floating">
+        <select
+          class="form-select"
+          id="floatingSelect"
+          aria-label="Floating label select example"
+        >
+          <option selected>Choose Level</option>
+          <a class="dropdown-item">Item 1</a>
+          <option value="1">Level 1</option>
+          <option value="2">Level 2</option>
+          <option value="3">Level 3</option>
+        </select>
+        <label for="floatingSelect"></label>
+      </div> -->
+
+      <!-- <div class="dropdown">
+        <select (change)="selectLevel($event.target.value)">
+          <option value="0">Select Level</option>
+          <option value="1">Level 1</option>
+          <option value="2">Level 2</option>
+          <option value="3">Level 3</option>
+        </select>
+      </div> -->
+
+      <!-- <div class="dropdown">
+        <button (click)="toggleDropdown()">Select Level</button>
+        <ul *ngIf="showDropdown" class="dropdown-list">
+          <li (click)="selectLevel(1)">Level 1</li>
+          <li (click)="selectLevel(2)">Level 2</li>
+          <li (click)="selectLevel(3)">Level 3</li>
+        </ul>
+      </div> -->
+      <!-- ========================================= -->
+      <div class="dropdown">
+        <!-- <h1 class="">Select Level</h1> -->
+        <select [(ngModel)]="selectedLevel">
+          <!-- <option value="0">Select Level</option> -->
+          <option [ngValue]="'1'">Level 1</option>
+          <option [ngValue]="'2'">Level 2</option>
+          <option [ngValue]="'3'">Level 3</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="doc_container" *ngIf="selectedLevel === '1'">
+    <div class="card mb-3" style="max-width: 540px">
+      <h1 class="text-4xl font-extrabold font-mono mb-10">
+        Candle stick Charting Guide
+      </h1>
+      <div class="row g-0">
+        <div
+          class="col-md-4 p-5 bg-slate-500 border-t-4 border-r-8 border-solid rounded-t-2xl shadow-2xl"
+        >
+          <img
+            src="https://entertrader.in/wp-content/uploads/2022/10/Bearish_and_Bullish_Candlestick.jpg"
+            class="img-fluid rounded-start w-full h-72"
+            alt="..."
+          />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title text-xl text-center font-semibold">
+              Anatomy of Candlesticks
+            </h5>
+            <p
+              class="card-text font-semibold bg-red-300 text-black border rounded-2xl pb-5 border-t-0 rounded-t"
+            >
+              This is a wider card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.This is a wider card with supporting text below as a
+              natural lead-in to additional content. This content is a little
+              bit longer.This is a wider card with supporting text below as a
+              natural lead-in to additional content. This content is a little
+              bit longer.
+            </p>
+            <p class="card-text">
+              <!-- <small class="text-body-secondary">Last updated 3 mins ago</small> -->
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <h1 class="text-3xl mt-10 font-serif font-semibold mb-0">
+        Candle properties
+      </h1>
+
+      <div class="row g-0 mt-10">
+        <div
+          class="col-md-4 bg-slate-500 border-t-4 border-r-8 border-solid rounded-t-2xl shadow-2xl p-5 pb-0"
+        >
+          <img
+            src="assets/colour.png"
+            class="img-fluid rounded-start h-72 w-full"
+            alt="..."
+          />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title text-xl text-center font-semibold">Colour</h5>
+            <p
+              class="card-text text-xl font-semibold bg-red-300 text-black border rounded-2xl pb-5 border-t-0 rounded-t"
+            >
+              • The colour is generally displayed as green and red candles.
+              <br />
+              • Green candles are bullish, closing higher than the open.t<br />
+              • Red candles are bearish, closing lower than the open.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row g-0 mt-20">
+        <div
+          class="col-md-4 p-5 bg-slate-500 border-t-4 border-r-8 border-solid rounded-t-2xl shadow-2xl"
+        >
+          <img
+            src="assets/body.png"
+            class="img-fluid rounded-start w-full h-72"
+            alt="..."
+          />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title text-xl text-center font-semibold">
+              Body Size
+            </h5>
+            <p
+              class="card-text text-xl font-semibold bg-red-300 text-black border rounded-2xl pb-5 border-t-0 rounded-t"
+            >
+              • The body size represents the degree to which the bulls overcome
+              the bers (green candle) or the bears overcome the bulls (red
+              candle). <br />
+              • A large body shows incresed commitment<br />
+              • A small body shows reduced commitment.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3" style="max-width: 540px">
+        <div class="row g-0 mt-20">
+          <div
+            class="col-md-4 p-5 bg-slate-500 border-t-4 border-r-8 border-solid rounded-t-2xl shadow-2xl"
+          >
+            <img
+              src="assets/range.png"
+              class="img-fluid rounded-start h-72 w-full"
+              alt="..."
+            />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title text-xl text-center font-semibold">
+                Range
+              </h5>
+              <p
+                class="card-text text-xl font-semibold bg-red-300 text-black border rounded-2xl pb-5 border-t-0 rounded-t"
+              >
+                • The range of the candle is the distance from the high to the
+                low, and represents the volatility of the price during the
+                trading session. <br />
+                • A wide range shows increased volatility<br />
+                • A narrow range shows redused volatility
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3" style="max-width: 540px">
+        <div class="row g-0 mt-20">
+          <div
+            class="col-md-4 p-5 bg-slate-500 border-t-4 border-r-8 border-solid rounded-t-2xl shadow-2xl"
+          >
+            <img
+              src="assets/shadow.png"
+              class="img-fluid rounded-start h-72 w-full"
+              alt="..."
+            />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title text-xl text-center font-semibold">
+                Shadow Loation
+              </h5>
+              <p
+                class="card-text text-xl font-semibold bg-red-300 text-black border rounded-2xl pb-5 border-t-0 rounded-t"
+              >
+                • Shadows above the real body show rejection of higher
+                prices(selling). <br />
+                • Shadows below the real body show rejection of lower
+                prices(buying)<br />
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h1 class="text-4xl mt-10 -mb-10">Doji</h1>
+
+      <div class="card mb-3" style="max-width: 540px">
+        <div class="row g-0 mt-20">
+          <div
+            class="col-md-4 p-5 bg-slate-500 border-t-4 border-r-8 border-solid rounded-t-2xl shadow-2xl"
+          >
+            <img
+              src="assets/doji.png"
+              class="img-fluid rounded-start h-72 w-full"
+              alt="..."
+            />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title text-xl text-center font-semibold">
+                Description
+              </h5>
+              <p
+                class="card-text text-xl font-semibold bg-red-300 text-black border rounded-2xl pb-5 border-t-0 rounded-t"
+              >
+                • BULLISH or BEARISH single candle Reversal Pattern. <br />
+                • The open is equal to (or almost equal to) the close,resulting
+                in no real body. Indecision in the market - neither the bulls
+                nor bears are in control.
+                <br />
+                • The Doji can be found at the top or bottom. The Gravestone
+                Doji is usually found at a top reversal. The Dragonfly Doji is
+                usually found at a bottom reversal.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title text-xl text-center font-semibold">
+            Description
+          </h5>
+          <p
+            class="card-text text-xl font-semibold bg-red-300 text-black border rounded-2xl pb-5 border-t-0 rounded-t"
+          >
+            Setup <br />
+            A trending market - an uptrend for a bearish reversal, or downtrend
+            for a bullish reversal.<br />
+            Psychology <br />
+            • A Doji indicates a `tug-of-war` between the bulls and bears in
+            which neither party was dominant. Price mat have been up and driven
+            up and/or down from the open, but was driven back to close equal to
+            (or almost eqaul to) the opening price. This indecision in the
+            market often precedes a change in trend to either a sideways or a
+            reverse direction trend<br />
+            The Gravestone Doji is more bearish, and therefore more effective at
+            a market top. The Dragonfly Doji is more bullish, and therefore more
+            effective at a market bottom.<br />
+            Confirmation<br />
+            The price trades above the doji at a market bottom, or below the
+            doji at a market top.
+            <br />
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="selectedLevel === '2'">
+    <h1>
+      Working in progress         
+            •     
+          •        
+      
+    </h1>
+  </div>
+  <div *ngIf="selectedLevel === '3'">
+    <h1>Working in progress</h1>
+  </div>
+</div>

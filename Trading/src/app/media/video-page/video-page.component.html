@@ -1,0 +1,117 @@
+<div class="learn_header">
+  <h1 class="bg-black font-mono w-full h-20 text-center text-6xl">
+    Welcome to Trading
+  </h1>
+  <div class="container">
+    <div class="flex text-center font-serif text-4xl">
+      <!-- <a routerLink="" class="bg-slate-400 w-full">Vedios</a> -->
+      <h1
+        class="bg-gradient-to-r from-indigo-600 to-pink-500 text-6xl text-center hover:text-pink-600 ease-in duration-300"
+      >
+        Vedios
+      </h1>
+
+      <!-- <div class="form-floating">
+        <select
+          class="form-select"
+          id="floatingSelect"
+          aria-label="Floating label select example"
+        >
+          <option selected>Choose Level</option>
+          <a class="dropdown-item">Item 1</a>
+          <option value="1">Level 1</option>
+          <option value="2">Level 2</option>
+          <option value="3">Level 3</option>
+        </select>
+        <label for="floatingSelect"></label>
+      </div> -->
+
+      <!-- <div class="dropdown">
+        <select
+          class="form-select"
+          id="floatingSelect"
+          aria-label="Floating label select example"
+          [(ngModel)]="selectedLevel"
+        >
+          <option value="0">Select Level</option>
+          <option selected>Choose Level</option>
+          <a class="dropdown-item">Item 1</a>
+          <option [ngValue]="'1'">Level 1</option>
+          <option [ngValue]="'2'">Level 2</option>
+          <option [ngValue]="'3'">Level 3</option>
+        </select>
+      </div> -->
+    </div>
+  </div>
+  <div class="doc_container" *ngIf="selectedLevel === '1'">
+    <div class="card mb-3" style="max-width: 540px">
+      <div class="video-container mb-16">
+        <!-- <iframe
+          width="560"
+          height="315"
+          [src]="youtubeEmbedUrl"
+          frameborder="0"
+          allowfullscreen
+        ></iframe> -->
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/_ucD8sc30xY"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/ooQe_x3z_d0"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <div class="row g-0 mt-20">
+        <div
+          class="col-md-4 p-5 bg-slate-500 border-t-4 border-r-8 border-solid rounded-t-2xl shadow-2xl w-full"
+        >
+          <iframe
+            width="500"
+            height="315"
+            src="https://www.youtube.com/embed/ooQe_x3z_d0"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title text-xl text-center font-semibold">
+              Body Size
+            </h5>
+            <p
+              class="card-text text-xl font-semibold bg-red-300 text-black border rounded-2xl pb-5 border-t-0 rounded-t"
+            >
+              • The body size represents the degree to which the bulls overcome
+              the bers (green candle) or the bears overcome the bulls (red
+              candle). <br />
+              • A large body shows incresed commitment<br />
+              • A small body shows reduced commitment.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="selectedLevel === '1'">
+    <h1>Working in progress</h1>
+  </div>
+  <div *ngIf="selectedLevel === '2'">
+    <h1>Working in progress</h1>
+  </div>
+</div>
